@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Katherin 💙</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Fondo azul degradado */
+    background: linear-gradient(135deg, #0f2027, #2c5364, #4facfe);
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Contenedor */
+.escena {
+    position: relative;
+    width: 320px;
+    height: 450px;
+}
+
+/* Texto */
+.mensaje {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.6);
+    animation: aparecer 2s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Maceta */
+.maceta {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 140px;
+    background: #d89263;
+    border-radius: 0 0 90px 90px;
+}
+
+/* Tallos */
+.tallo {
+    position: absolute;
+    width: 6px;
+    background: #1f6b5a;
+    bottom: 120px;
+    transform-origin: bottom;
+    animation: moverTallo 9s ease-in-out infinite;
+}
+
+.t1 { left: 50%; height: 140px; }
+.t2 { left: 30%; height: 120px; animation-delay: 0.5s; }
+.t3 { left: 70%; height: 110px; animation-delay: 1s; }
+
+@keyframes moverTallo {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Flor */
+.flor {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    animation: flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Pétalos */
+.petalo {
+    width: 28px;
+    height: 28px;
+    background: #ffd54f;
+    border-radius: 50%;
+    position: absolute;
+    animation: viento 2s infinite ease-in-out;
+}
+
+/* Movimiento individual */
+.petalo:nth-child(1) { animation-delay: 0s; }
+.petalo:nth-child(2) { animation-delay: 0.3s; }
+.petalo:nth-child(3) { animation-delay: 0.6s; }
+.petalo:nth-child(4) { animation-delay: 0.9s; }
+
+@keyframes viento {
+    0% { transform: rotate(0deg) translateX(0); }
+    50% { transform: rotate(10deg) translateX(2px); }
+    100% { transform: rotate(0deg) translateX(0); }
+}
+
+/* Centro */
+.centro {
+    width: 18px;
+    height: 18px;
+    background: #ff8f00;
+    border-radius: 50%;
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    z-index: 2;
+}
+
+/* Pétalos posición */
+.p1 { top: 0; left: 16px; }
+.p2 { bottom: 0; left: 16px; }
+.p3 { left: 0; top: 16px; }
+.p4 { right: 0; top: 16px; }
+
+/* Posiciones */
+.f1 { bottom: 240px; left: calc(50% - 30px); }
+.f2 { bottom: 220px; left: calc(30% - 30px); }
+.f3 { bottom: 210px; left: calc(70% - 30px); }
+
+/* Hojas */
+.hoja {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background: #1f6b5a;
+    border-radius: 20px;
+}
+
+.h1 { bottom: 170px; left: 42%; transform: rotate(-30deg); }
+.h2 { bottom: 150px; left: 55%; transform: rotate(30deg); }
+.h3 { bottom: 160px; left: 25%; transform: rotate(-20deg); }
+
+</style>
+</head>
+
+<body>
+
+<div class="escena">
+
+    <!-- Mensaje -->
+    <div class="mensaje">Para mi reina Katherin, no son reales pero estas no se marchitan 💙</div>
+
+    <!-- Maceta -->
+    <div class="maceta"></div>
+
+    <!-- Tallos -->
+    <div class="tallo t1"></div>
+    <div class="tallo t2"></div>
+    <div class="tallo t3"></div>
+
+    <!-- Flores -->
+    <div class="flor f1">
+        <div class="petalo p1"></div>
+        <div class="petalo p2"></div>
+        <div class="petalo p3"></div>
+        <div class="petalo p4"></div>
+        <div class="centro"></div>
+    </div>
+
+    <div class="flor f2">
+        <div class="petalo p1"></div>
+        <div class="petalo p2"></div>
+        <div class="petalo p3"></div>
+        <div class="petalo p4"></div>
+        <div class="centro"></div>
+    </div>
+
+    <div class="flor f3">
+        <div class="petalo p1"></div>
+        <div class="petalo p2"></div>
+        <div class="petalo p3"></div>
+        <div class="petalo p4"></div>
+        <div class="centro"></div>
+    </div>
+
+    <!-- Hojas -->
+    <div class="hoja h1"></div>
+    <div class="hoja h2"></div>
+    <div class="hoja h3"></div>
+
+</div>
+
+</body>
+</html>
